@@ -1,23 +1,24 @@
 # Pdf-Page-Splitter
-Bu Python aracı, PDF dosyalarındaki her sayfayı ortadan ikiye bölerek (yatay veya dikey)
-her yarıyı ayrı bir sayfa olacak sıralı bir şekilde tek bir PDF dosyasında birleştirir.
+This Python tool splits each page of a PDF file into two halves (horizontally or vertically)  
+and merges each half sequentially into a single output PDF file.
 
-Özellikle tek sayfada iki kitap sayfası bulunan (taranmış kitaplar, ders notları vb.)
-PDF’leri okunabilir hale getirmek için tasarlanmıştır.
+It is especially designed to make PDFs more readable when they contain two book pages on a single page  
+(such as scanned books, lecture notes, etc.).
 
 ---
 
 
-## 📌Gereksinimler 
-  PyMuPDF kütüphanesi
+## 📌Requirements
+  PyMuPDF library
 
-## 🛠️Kurulum
-Terminal veya komut satırında aşağıdaki komutu çalıştır:
+## 🛠️Installation
+Run the following command in your terminal or command prompt:
 ```bash
 pip install PyMuPDF
 ```
-## 🎯Kullanım
-PDF dosyanı python dosyasının bulunduğu klasöre koy.  
-Script’i çalıştır.  
-PDF dosya adını gir.  
-Çıktı dosyasının adı varsayılan olarak; bolunmus_sonuc.pdf
+## 🎯Usage
+1. Place your PDF file in the same folder as the Python script.  
+2. Run the script.  
+3. Enter the name of the PDF file.  
+4. The output file will be created with the default name:  
+   **bolunmus_sonuc.pdf**
