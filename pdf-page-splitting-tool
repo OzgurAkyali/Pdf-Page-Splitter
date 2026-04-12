@@ -1,21 +1,20 @@
 import fitz
 
-input_pdf = input("PDF dosya adını gir (örnek: kitap.pdf): ").strip()
-output_pdf = "bolunmus_sonuc.pdf"
+input_pdf = input("Enter the PDF file name (example: book.pdf): ").strip()
+output_pdf = "split_output.pdf"
 
 try:
     doc = fitz.open(input_pdf)
     new_doc = fitz.open()
 
-    print("\n--- Yapılandırma ---")
+    print("\n--- Configuration ---")
     bolme_tipi = input(
-        "Sayfa içindeki içerik nasıl bölünmeli? (Sağ-Sol: 1, Üst-Alt: 0): "
+        "How should the page be split? (Left-Right: 1, Top-Bottom: 0): "
     ).strip()
 
     for page_index in range(len(doc)):
         page = doc[page_index]
 
-        
         rect = page.bound()
         width = rect.width
         height = rect.height
@@ -63,7 +62,7 @@ try:
             )
 
     new_doc.save(output_pdf)
-    print(f"\nİşlem başarıyla tamamlandı: {output_pdf}")
+    print(f"\nProcess completed successfully: {output_pdf}")
 
 except Exception as e:
-    print(f"Bir hata oluştu: {e}")
+    print(f"An error occurred: {e}")
