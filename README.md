@@ -21,4 +21,4 @@ pip install PyMuPDF
 2. Run the script.  
 3. Enter the name of the PDF file.  
 4. The output file will be created with the default name:  
-   **bolunmus_sonuc.pdf**
+   **split_output.pdf**
